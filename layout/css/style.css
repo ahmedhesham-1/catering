@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.flex {
+    display: flex;
+}
+
+.fl-1 {
+    flex: 1;
+}
+
+.fl-2 {
+    flex: 2;
+}
+
+.header {
+    color:white;
+    height: 80px;
+    background-color: black;
+    padding: 10px 20px;
+    align-items: center;
+}
+
+.header-logo {
+    width: 200px;
+    height: 100%;
+    text-align: center;
+}
+
+.header-logo img {
+    width: 200px;
+    height: 100%;
+    margin: 0 auto;
+
+}
+
+.header-nav {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-nav p {
+    text-align: center;
+    margin: 0 20px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.header-buttons {
+    text-align: center;
+}
+
+.btn {
+    background-color: white;
+    border: 2px solid white;
+    border-radius: 25px;
+    padding: 5px 15px;
+    cursor: pointer;
+}
+
+.btn.alt {
+    background-color: black;
+    color: white;
+}
