@@ -63,7 +63,6 @@ class registerModel extends UserModel
         $this->dbh->bind(':uname', $this->name);
         $this->dbh->bind(':phone', $this->phone);
         $this->dbh->bind(':pass', $this->password);
-        
 
         return $this->dbh->execute();
     }
