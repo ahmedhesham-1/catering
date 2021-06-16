@@ -1,9 +1,9 @@
 <?php
-class menu extends view{
+class adminmenu extends view{
   public function output(){
     $title = $this->model->title;
-    $subtitle = $this->model->subtitle;
-    require APPROOT . '/views/inc/header.php';
+   
+    require APPROOT . '/views/inc/adminheader.php';
  ?>
 
     <div class="top-banner">
@@ -17,8 +17,9 @@ class menu extends view{
   <div class="container">
     <div class="products-area category-area">
       <!-- heading -->
+      <a style="margin-left:650px;" href="<?php echo URLROOT . 'public/admin/addProduct'; ?>" class="btn cart px-auto heading ">ADD PRODUCT</a>
         <h1 class="heading">Apptiezers </h1>
-       
+        
      
       
       <div class="row">
@@ -37,7 +38,9 @@ class menu extends view{
                         </div>
                 <h2><?php echo $item->name?></h2>
                 <p><?php echo $item->description?></p>
-               <a href="#" class="btn cart px-auto">Add to Cart</a>`
+                <form method="post">
+               <a href="<?php echo URLROOT . 'public/admin/editProduct'; ?>"name="edit" value="<?php $item->ID;?>" class="btn cart px-auto">Edit</a>`
+            </form>
             </div>
 
               <?php
@@ -57,7 +60,6 @@ class menu extends view{
     <div class="products-area category-area">
       <!-- heading -->
         <h1 class="heading">Salads </h1>
-       
      
       
       <div class="row">
@@ -76,7 +78,7 @@ class menu extends view{
                         </div>
                 <h2><?php echo $item->name?></h2>
                 <p><?php echo $item->description?></p>
-               <a href="#" class="btn cart px-auto">Add to Cart</a>`
+               <a href="#" class="btn cart px-auto">Edit</a>`
             </div>
 
               <?php
@@ -95,7 +97,6 @@ class menu extends view{
     <div class="products-area category-area">
       <!-- heading -->
         <h1 class="heading">Main Dish</h1>
-       
      
       
       <div class="row">
@@ -114,7 +115,7 @@ class menu extends view{
                         </div>
                 <h2><?php echo $item->name?></h2>
                 <p><?php echo $item->description?></p>
-               <a href="#" class="btn cart px-auto">Add to Cart</a>`
+               <a href="#" class="btn cart px-auto">Edit</a>`
             </div>
 
               <?php

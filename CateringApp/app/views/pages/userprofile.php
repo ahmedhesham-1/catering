@@ -6,32 +6,41 @@ class userprofile extends view{
     require APPROOT . '/views/inc/header.php';
  ?>
 
+
+          <?php
+            foreach($this->model->readProfile() as $item){
+            
+            ?>
 <div>
 <button type="button" id="blue_button1">Edit </button>
 </div>
 
 
 <div>
-<u id="Hello"> Hello User <u>
+<u id="Hello"> Hello <?php echo  $item->name; ?><u>
 </div>
 
 
 <div>
-<b id="Name"> Name <b>
+<b id="Name"> <?php echo  $item->name; ?> <b>
 </div>
 
 <div>
-<b id="Phone"> Phone <b>
+<b id="Phone"> <?php echo  $item->phone; ?> <b>
 </div>
 
 <div>
-<b id="Password"> Password <b>
+<b id="Password"> <?php echo  $item->password; ?> <b>
 </div>
 
 
 <span class="circle">
-<img src="../../public/img/party.jpg" alt="Avatar" style="width:180px">
+<img src=<?php echo URLROOT . $item->profilePic; ?> alt="Avatar" style="width:180px">
 </span>
+
+<?php
+             }  
+             ?>
 
 <?php
   require APPROOT . '/views/inc/footer.php';

@@ -43,6 +43,7 @@ class Pages extends Controller
 
     public function userprofile()
     {
+        
         $viewPath = VIEWS_PATH . 'pages/userprofile.php';
         require_once $viewPath;
         $userprofileView = new userprofile($this->getModel(), $this);
