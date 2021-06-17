@@ -1,5 +1,10 @@
- <!DOCTYPE html>
-<html lang="en">
+ 
+<?php
+class Adminprofile extends view{
+  public function output(){
+    $title = $this->model->title; 
+ ?>
+
 <head>
 
 <meta charset="UTF-8">
@@ -13,26 +18,47 @@
 <div>
 </div>
 
+<?php
+            foreach($this->model->readProfile() as $item){
+            
+            ?>
 <div>
 <button type="button" id="blue_button1">Edit </button>
 </div>
 
 
 <div>
-<u id="Hello"> Hello Admin <u>
+<u id="Hello"> Hello <?php echo  $item->name; ?><u>
 </div>
 
 
 <div>
-<b id="Name"> Name <b>
+<b id="Name"> <?php echo  $item->name; ?> <b>
 </div>
 
 <div>
-<b id="Password"> Password <b>
+<b id="Phone"> <?php echo  $item->phone; ?> <b>
+</div>
+
+<div>
+<b id="Password"> <?php echo  $item->password; ?> <b>
 </div>
 
 
 <span class="circle">
+<img src=<?php echo URLROOT . $item->profilePic; ?> alt="Avatar" style="width:180px">
+</span>
+
+<?php
+             }  
+             ?>
+
+<?php
+  require APPROOT . '/views/inc/footer.php';
+
+?>
+</body>
+</html>
 <img src="../images/party.jpg" alt="Avatar" style="width:180px">
 </span>
 
