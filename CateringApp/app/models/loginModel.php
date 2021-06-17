@@ -1,6 +1,6 @@
 <?php
 require_once 'UserModel.php';
-class loginModel extends UserModel
+class LoginModel extends UserModel
 {
     public  $title = 'User Login Page';
 

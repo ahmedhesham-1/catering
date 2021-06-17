@@ -1,6 +1,6 @@
 <?php
 require_once 'UserModel.php';
-class registerModel extends UserModel
+class RegisterModel extends UserModel
 {
     public  $title = 'User Registration Page';
     protected $name;

@@ -1,7 +1,7 @@
 <?php
 class Users extends Controller
 {
-    public function register()
+    public function Register()
     {
         $registerModel = $this->getModel();
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -40,7 +40,7 @@ class Users extends Controller
                 $registerModel->setPassword(password_hash($registerModel->getPassword(), PASSWORD_DEFAULT));
 
                 if ($registerModel->signup()) {
-                    header('location: ' . URLROOT . 'public/users/login');
+                    header('location: ' . URLROOT . 'public/users/Login');
                 } else {
                     die('Error in sign up');
                 }
@@ -48,12 +48,12 @@ class Users extends Controller
         }
         // Load form
         //echo 'Load form, Request method: ' . $_SERVER['REQUEST_METHOD'];
-        $viewPath = VIEWS_PATH . 'users/register.php';
+        $viewPath = VIEWS_PATH . 'users/Register.php';
         require_once $viewPath;
         $view = new Register($this->getModel(), $this);
         $view->output();
     }
-    public function login()
+    public function Login()
     {
         $userModel = $this->getModel();
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -87,7 +87,7 @@ class Users extends Controller
         }
         // Load form
         //echo 'Load form, Request method: ' . $_SERVER['REQUEST_METHOD'];
-        $viewPath = VIEWS_PATH . 'users/login.php';
+        $viewPath = VIEWS_PATH . 'users/Login.php';
         require_once $viewPath;
         $view = new Login($userModel, $this);
         $view->output();

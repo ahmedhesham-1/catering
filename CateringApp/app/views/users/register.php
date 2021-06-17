@@ -17,7 +17,7 @@ class Register extends view
                 <h1>Sign Up</h1>
                 <form action="" method="post">
                     <input type="text" name="name" placeholder="Name"><br>
-                    <input type="text" name="phone" placeholder="Phone Number"><br>
+                    <input type="text" name="phone" placeholder="Phone Number" pattern="[0-9]{1,11}" title="Please enter valid number"><br>
                     <input type="password" name="password" placeholder="password"><br>
                     <input type="password" name="confirm_password" placeholder="Re-Type password    "><br>
                     <input type="submit" value="Sign Up">

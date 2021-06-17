@@ -16,14 +16,16 @@ class Login extends view
             <div class="item left">
                 <h1>Sign In</h1>
                 <form action="" method="post">
-                    <input type="text" name="phone" placeholder="Phone Number"><br>
-                    <input type="password" name="password" placeholder="password"><br>
-                    <input type="submit" value="Sign Up">
+                    <input type="text" name="phone" placeholder="Phone Number" required><br>
+                    <input type="password" name="password" placeholder="password" required><br>
+                    <input type="submit" value="Sign In">
                 </form>
             </div>
 <div class="item right">
     
-    
+</div>
+        </div>
+    </div>
     
       <?php
       require APPROOT . '/views/inc/footer.php';

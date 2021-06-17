@@ -35,4 +35,12 @@ class Admin extends Controller
         $addProductView = new addProduct($this->getModel(), $this);
         $addProductView->output();
     }
+
+     public function editProduct()
+    {
+        $viewPath = VIEWS_PATH . 'admin/editProduct.php';
+        require_once $viewPath;
+        $editProductView = new editProduct($this->getModel(), $this);
+        $editProductView->output();
+    }
 }

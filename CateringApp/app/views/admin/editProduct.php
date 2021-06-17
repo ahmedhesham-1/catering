@@ -1,5 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
+class editProduct extends view{
+  public function output(){
+    $title = $this->model->title;
+   
+    require APPROOT . '/views/inc/adminheader.php';
+ ?>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,13 +14,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="../layout/css/style.css">
-
-    <title>Edit Products</title>
 </head>
-
-<body>
-
-    <?php include('../includes/AdminHeader.php'); ?>
 
     <div class="container" style="margin-top:200px;">
     <div class="row">
@@ -31,7 +30,8 @@
 
 <div class="col-md-4">
     <div class="row" style="margin-bottom:120px;">
-<h3>Current Name</h3>
+    <h3>Current Name</h3>
+    <p>
      </div>
      <div class="row"   style="margin-bottom:90px;">
 
@@ -69,5 +69,9 @@
 </div>
 </div>
 </div>
-</body>
-</html>
+<?php
+  require APPROOT . '/views/inc/footer.php';
+
+  }
+}
+?>

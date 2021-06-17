@@ -1,7 +1,8 @@
 
 <div class="header flex">
     <div class="header-logo fl-1">
-        <img src="<?php echo URLROOT . 'public/img/logoBack.jpg'; ?>" alt="">
+        <img src="<?php echo URLROOT . 'public/img/logoBack.jpg'; ?>"  onclick="window.location.href='<?php echo URLROOT . 'public/pages/index'; ?>';"alt="">
+        
     </div>
     <div class="header-nav fl-2 flex">
         <p>
@@ -35,7 +36,7 @@
       
     </div>
     <div class="header-buttons fl-1">
-        <input type="button" onclick="window.location.href='<?php echo URLROOT . 'public/users/login'; ?>';" class="btn alt" value="Signin">
-        <input type="button" onclick="window.location.href='<?php echo URLROOT . 'public/users/register'; ?>';" class="btn alt" value="Signup">
+        <input type="button" onclick="window.location.href='<?php echo URLROOT . 'public/users/Login'; ?>';" class="btn alt" value="Signin">
+        <input type="button" onclick="window.location.href='<?php echo URLROOT . 'public/users/Register'; ?>';" class="btn alt" value="Signup">
     </div>
 </div>
