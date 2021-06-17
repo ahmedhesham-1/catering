@@ -135,25 +135,7 @@ class shopingcart extends view{
       <!-- Card -->
 
       <!-- Card -->
-      <div class="card mb-3">
-        <div class="card-body">
-
-          <h5 class="mb-4">We accept</h5>
-
-          <img class="mr-2" width="45px"
-            src="https://mdbootstrap.com/wp-content/plugins/woocommerce-gateway-stripe/assets/images/visa.svg"
-            alt="Visa">
-          <img class="mr-2" width="45px"
-            src="https://mdbootstrap.com/wp-content/plugins/woocommerce-gateway-stripe/assets/images/amex.svg"
-            alt="American Express">
-          <img class="mr-2" width="45px"
-            src="https://mdbootstrap.com/wp-content/plugins/woocommerce-gateway-stripe/assets/images/mastercard.svg"
-            alt="Mastercard">
-          <img class="mr-2" width="45px"
-            src="https://z9t4u9f6.stackpathcdn.com/wp-content/plugins/woocommerce/includes/gateways/paypal/assets/images/paypal.png"
-            alt="PayPal acceptance mark">
-        </div>
-      </div>
+    
       <!-- Card -->
 
     </div>
@@ -195,25 +177,7 @@ class shopingcart extends view{
       <!-- Card -->
 
       <!-- Card -->
-      <div class="card mb-3">
-        <div class="card-body">
-
-          <a class="dark-grey-text d-flex justify-content-between" data-toggle="collapse" href="#collapseExample1"
-            aria-expanded="false" aria-controls="collapseExample1">
-            Add a discount code (optional)
-            <span><i class="fas fa-chevron-down pt-1"></i></span>
-          </a>
-
-          <div class="collapse" id="collapseExample1">
-            <div class="mt-3">
-              <div class="md-form md-outline mb-0">
-                <input type="text" id="discount-code1" class="form-control font-weight-light"
-                  placeholder="Enter discount code">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    
       <!-- Card -->
 
     </div>
