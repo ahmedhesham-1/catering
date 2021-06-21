@@ -5,9 +5,10 @@ class userprofileModel extends model{
 
 
 
-     public function readProfile(){
+     public function readProfile($x){
           
-          $this->dbh->query("SELECT * FROM users WHERE ID='1'");
+          $this->dbh->query("SELECT * FROM users WHERE ID=':ID'");
+          $this->dbh->bind(':ID', $x);
           return $this->dbh->resultSet();
      }
 }
