@@ -19,7 +19,7 @@ class Adminprofile extends view{
 </div>
 
 <?php
-            foreach($this->model->readProfile() as $item){
+            foreach($this->model->readProfile($_SESSION['ID']) as $item){
             
             ?>
 <div>
