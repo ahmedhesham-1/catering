@@ -1,7 +1,8 @@
 <?php
+
 class Users extends Controller
 {
-    public function Register()
+    public function register()
     {
         $registerModel = $this->getModel();
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -11,15 +12,24 @@ class Users extends Controller
             $registerModel->setPassword(trim($_POST['password']));
             $registerModel->setConfirmPassword(trim($_POST['confirm_password']));
 
+            $nameValidation = "/^[a-zA-Z0-9]*$/";
+            $passwordValidation = "/^(.{0,7}|[^a-z]*|[^\d]*)$/i";
+            
             //validation
             if (empty($registerModel->getName())) {
-                $registerModel->setNameErr('Please enter a name');
+                $registerModel->setNameErr('Please enter a name.');
+            }elseif (!preg_match($nameValidation->getName())) {
+                $registerModel->setNameErr ('Name can only contain letters and numbers.');
             }
+
+
             if (empty($registerModel->getPhone())) {
                 $registerModel->setPhoneErr('Please enter an phone');
             } elseif ($registerModel->PhoneExist($_POST['phone'])) {
                 $registerModel->setPhoneErr('Phone is already registered');
             }
+
+
             if (empty($registerModel->getPassword())) {
                 $registerModel->setPasswordErr('Please enter a password');
             } elseif (strlen($registerModel->getPassword()) < 4) {
@@ -40,7 +50,7 @@ class Users extends Controller
                 $registerModel->setPassword(password_hash($registerModel->getPassword(), PASSWORD_DEFAULT));
 
                 if ($registerModel->signup()) {
-                    header('location: ' . URLROOT . 'public/users/Login');
+                    header('location: ' . URLROOT . 'public/users/login');
                 } else {
                     die('Error in sign up');
                 }
@@ -48,12 +58,12 @@ class Users extends Controller
         }
         // Load form
         //echo 'Load form, Request method: ' . $_SERVER['REQUEST_METHOD'];
-        $viewPath = VIEWS_PATH . 'users/Register.php';
+        $viewPath = VIEWS_PATH . 'users/register.php';
         require_once $viewPath;
         $view = new Register($this->getModel(), $this);
         $view->output();
     }
-    public function Login()
+    public function login()
     {
         $userModel = $this->getModel();
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -75,21 +85,22 @@ class Users extends Controller
             }
 
 
-            if (
-                empty($userModel->getPhoneErr()) &&
-                empty($userModel->getPasswordErr())
-            ) {
-                //Check login is correct
+         
 
+            if($x=$userModel->findUserByPhone($_POST['phone'])){
+                $_SESSION['ID']=$x->id;
+                header('location: ' . URLROOT . 'public/pages/index');
 
-                die('Valid User');
             }
+
+
         }
         // Load form
         //echo 'Load form, Request method: ' . $_SERVER['REQUEST_METHOD'];
-        $viewPath = VIEWS_PATH . 'users/Login.php';
+        $viewPath = VIEWS_PATH . 'users/login.php';
         require_once $viewPath;
         $view = new Login($userModel, $this);
         $view->output();
     }
 }
+
