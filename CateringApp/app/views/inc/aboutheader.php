@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="<?php echo URLROOT; ?>public/css/main.css">
   <link rel="stylesheet" href="<?php echo URLROOT; ?>public/css/master.css">
   <link rel="stylesheet" href="<?php echo URLROOT; ?>public/css/checkout.css">
+  <link rel="stylesheet" href="<?php echo URLROOT; ?>public/css/footer.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 

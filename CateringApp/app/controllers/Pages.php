@@ -73,4 +73,11 @@ class Pages extends Controller
         $shopingcartView = new shopingcart($this->getModel(), $this);
         $shopingcartView->output();
     }
+    public function checkout()
+    {
+        $viewPath = VIEWS_PATH . 'pages/checkout.php';
+        require_once $viewPath;
+        $checkoutView = new checkout($this->getModel(), $this);
+        $checkoutView->output();
+    }
 }

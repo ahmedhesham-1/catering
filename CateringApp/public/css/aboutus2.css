@@ -80,7 +80,7 @@ max-width: 400px;
     height:500px;
 }
 .box-wrapper .item.right{
-    background-image: url(../../images/pizza.jpg);
+    background-image: url(../../public/img/banner.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

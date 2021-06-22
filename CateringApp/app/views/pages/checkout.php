@@ -1,16 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-
-<meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="layout/css/checkout.css">
-    <link rel="stylesheet" href="layout/css/style.css">
-</head>
-<body>
-
-<?php include('includes/header.php'); ?>
+<?php
+class checkout extends view{
+  public function output(){
+    $title = $this->model->title;
+    require APPROOT . '/views/inc/aboutheader.php';
+    
+ ?>
 
 <div id="img">
 <b>Check Out<b>
@@ -102,6 +96,9 @@
 
 
 
+<?php
+  require APPROOT . '/views/inc/footer.php';
 
-</body>
-</html>
+  }
+}
+?>

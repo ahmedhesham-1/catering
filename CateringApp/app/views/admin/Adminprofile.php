@@ -1,20 +1,16 @@
- <!DOCTYPE html>
-<html lang="en">
-<head>
+<?php
+class Adminprofile extends view{
+  public function output(){
+    $title = $this->model->title;
+   
+    require APPROOT . '/views/inc/adminheader.php';
+ ?>
 
-<meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../layout/css/style2.css">
-    <link rel="stylesheet" href="../layout/css/style.css">
-</head>
-<body>
-<?php include('../includes/AdminHeader.php'); ?>
 <div>
 </div>
 
 <div>
-<button type="button" id="blue_button1">Edit </button>
+<input type="button" onclick="window.location.href='<?php echo URLROOT . 'public/admin/editAdminprofile'; ?>';" id="blue_button1" value="Edit"> </input>
 </div>
 
 
@@ -33,9 +29,13 @@
 
 
 <span class="circle">
-<img src="../images/party.jpg" alt="Avatar" style="width:180px">
+<img src="../../public/img/party.jpg" alt="Avatar" style="width:180px">
 </span>
 
 
-</body>
-</html>
+<?php
+  require APPROOT . '/views/inc/footer.php';
+
+  }
+}
+?>

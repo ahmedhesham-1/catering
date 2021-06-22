@@ -12,7 +12,7 @@ class Login extends view
 
 <div class="flex align-center justify-center h-100">
         <div class="box-wrapper flex relative">
-            <div class="or-sep"></div>
+            
             <div class="item left">
                 <h1>Sign In</h1>
                 <form action="" method="post">
@@ -33,3 +33,4 @@ class Login extends view
       }
     }
     ?>
+    

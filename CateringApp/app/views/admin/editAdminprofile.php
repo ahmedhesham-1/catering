@@ -1,41 +1,47 @@
- <!DOCTYPE html>
-<html lang="en">
-<head>
-
-<meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../layout/css/style2.css">
-    <link rel="stylesheet" href="../layout/css/style.css">
-</head>
-<body>
-<?php include('../includes/AdminHeader.php'); ?>
+<?php
+class editAdminprofile extends view{
+  public function output(){
+    $title = $this->model->title;
+   
+    require APPROOT . '/views/inc/adminheader.php';
+ ?>
 <div>
+<input type="file"   id="yellow_button" name="uploadfile"  value="upload photo"/>
+
 </div>
 
 <div>
-<button type="button" id="blue_button1">Edit </button>
-</div>
 
-
-<div>
-<u id="Hello"> Hello Admin <u>
-</div>
-
-
-<div>
-<b id="Name"> Name <b>
+<input type="submit"  id="blue_button" name="pho" value="Update"/>
 </div>
 
 <div>
-<b id="Password"> Password <b>
+<form>  
+    <label id="User1">ADMIN 1</label>
+    <br>  
+    <input id="box1" type="text" name="New Name" placeholder="New Name" ><br>  
+
+    
+    <br>  
+    
+      
+    <label id= "number" >admin123</label>
+    <br>  
+    <input id="box2" type="text" name="New Password" placeholder="New Password">
+    <br>  
+      
+</form>  
 </div>
 
 
-<span class="circle">
-<img src="../images/party.jpg" alt="Avatar" style="width:180px">
+
+<span class="circle2">
+<img src="../../public/img/party.jpg" alt="Avatar" style="width:150px">
 </span>
 
+<?php
+  require APPROOT . '/views/inc/footer.php';
 
-</body>
-</html>
+  }
+}
+?>

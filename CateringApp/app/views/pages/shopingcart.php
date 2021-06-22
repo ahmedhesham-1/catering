@@ -63,7 +63,7 @@ class shopingcart extends view{
                 </div>
                 <div class="d-flex justify-content-between align-items-center">
                   <div>
-                    <a href="#!" type="button" class="card-link-secondary small text-uppercase mr-3"><i
+                    <a href="#!" style="color:black;" type="button" class="card-link-secondary small text-uppercase mr-3"><i
                         class="fas fa-trash-alt mr-1"></i> Remove item </a>
                     <!--
                       <a href="#!" type="button" class="card-link-secondary small text-uppercase"><i
@@ -103,7 +103,7 @@ class shopingcart extends view{
                 </div>
                 <div class="d-flex justify-content-between align-items-center">
                   <div>
-                    <a href="#!" type="button" class="card-link-secondary small text-uppercase mr-3"><i
+                    <a href="#!" style="color:black;" type="button" class="card-link-secondary small text-uppercase mr-3"><i
                         class="fas fa-trash-alt mr-1"></i> Remove item </a>
                     <!--
                     <a href="#!" type="button" class="card-link-secondary small text-uppercase"><i
@@ -115,8 +115,7 @@ class shopingcart extends view{
               </div>
             </div>
           </div>
-          <p class="text-primary mb-0"><i class="fas fa-info-circle mr-1"></i> Do not delay the purchase, adding
-            items to your cart does not mean booking them.</p>
+         
 
         </div>
       </div>
@@ -135,7 +134,7 @@ class shopingcart extends view{
       <!-- Card -->
 
       <!-- Card -->
-    
+      
       <!-- Card -->
 
     </div>
@@ -169,15 +168,17 @@ class shopingcart extends view{
               <span><strong>$53.98</strong></span>
             </li>
           </ul>
-
-          <button type="button" class="btn btn-primary btn-block waves-effect waves-light">go to checkout</button>
+          <button type="button" onclick="window.location.href='<?php echo URLROOT . 'public/pages/menu'; ?>';" class="btn btn-primary btn-block waves-effect waves-light">Continue Shopping</button>
+          <button type="button" onclick="window.location.href='<?php echo URLROOT . 'public/pages/checkout'; ?>';"class="btn btn-primary btn-block waves-effect waves-light">go to checkout</button>
+          
 
         </div>
       </div>
       <!-- Card -->
 
       <!-- Card -->
-    
+      
+      </div>
       <!-- Card -->
 
     </div>

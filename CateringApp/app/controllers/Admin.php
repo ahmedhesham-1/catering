@@ -43,4 +43,27 @@ class Admin extends Controller
         $editProductView = new editProduct($this->getModel(), $this);
         $editProductView->output();
     }
+
+    public function adminprofile()
+    {
+        $viewPath = VIEWS_PATH . 'admin/Adminprofile.php';
+        require_once $viewPath;
+        $adminprofileView = new adminprofile($this->getModel(), $this);
+        $adminprofileView->output();
+    }
+    public function editadminprofile()
+    {
+        $viewPath = VIEWS_PATH . 'admin/editAdminprofile.php';
+        require_once $viewPath;
+        $editadminprofileView = new editadminprofile($this->getModel(), $this);
+        $editadminprofileView->output();
+    }
+
+    public function orders()
+    {
+        $viewPath = VIEWS_PATH . 'admin/orders.php';
+        require_once $viewPath;
+        $ordersView = new orders($this->getModel(), $this);
+        $ordersView->output();
+    }
 }

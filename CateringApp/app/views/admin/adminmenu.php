@@ -39,7 +39,7 @@ class adminmenu extends view{
                 <h2><?php echo $item->name?></h2>
                 <p><?php echo $item->description?></p>
                 <form method="post">
-               <a href="<?php echo URLROOT . 'public/admin/editProduct'; ?>"name="edit" value="<?php $item->ID;?>" class="btn cart px-auto">Edit</a>`
+               <a href="<?php echo URLROOT . 'public/admin/editProduct'; ?>"name="edit" value="<?php $item->ID;?>" class="btn cart px-auto">Edit</a> or <a href="#"name="delete" value="delete" class="btn cart px-auto">Delete</a>
             </form>
             </div>
 
@@ -78,7 +78,7 @@ class adminmenu extends view{
                         </div>
                 <h2><?php echo $item->name?></h2>
                 <p><?php echo $item->description?></p>
-               <a href="#" class="btn cart px-auto">Edit</a>`
+                <a href="<?php echo URLROOT . 'public/admin/editProduct'; ?>"name="edit" value="<?php $item->ID;?>" class="btn cart px-auto">Edit</a> or <a href="#"name="delete" value="delete" class="btn cart px-auto">Delete</a>
             </div>
 
               <?php
@@ -115,7 +115,7 @@ class adminmenu extends view{
                         </div>
                 <h2><?php echo $item->name?></h2>
                 <p><?php echo $item->description?></p>
-               <a href="#" class="btn cart px-auto">Edit</a>`
+                <a href="<?php echo URLROOT . 'public/admin/editProduct'; ?>"name="edit" value="<?php $item->ID;?>" class="btn cart px-auto">Edit</a> or <a href="#"name="delete" value="delete" class="btn cart px-auto">Delete</a>
             </div>
 
               <?php

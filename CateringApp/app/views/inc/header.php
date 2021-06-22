@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="<?php echo URLROOT; ?>public/css/master.css">
   <link rel="stylesheet" href="<?php echo URLROOT; ?>public/css/checkout.css">
   <link rel="stylesheet" href="<?php echo URLROOT; ?>public/css/contact.css">
- 
+  <link rel="stylesheet" href="<?php echo URLROOT; ?>public/css/footer.css">
   <title>Louki's Catering</title>
 </head>
 <body>

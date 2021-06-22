@@ -12,7 +12,7 @@ class Register extends view
 
 <div class="flex align-center justify-center h-100">
         <div class="box-wrapper flex relative">
-            <div class="or-sep"></div>
+            
             <div class="item left">
                 <h1>Sign Up</h1>
                 <form action="" method="post">
@@ -21,6 +21,7 @@ class Register extends view
                     <input type="password" name="password" placeholder="password"><br>
                     <input type="password" name="confirm_password" placeholder="Re-Type password    "><br>
                     <input type="submit" value="Sign Up">
+                    <h4>Aleready have an account?<a style="color:blue; text-decoration:underline; a:hover ;" href="Login">Sign in</a></h4>
                 </form>
             </div>
             <div class="item right">

@@ -16,10 +16,10 @@ class editProduct extends view{
     <link rel="stylesheet" href="../layout/css/style.css">
 </head>
 
-    <div class="container" style="margin-top:200px;">
+<div class="container" style="margin-top:200px;">
     <div class="row">
  <div class="col-md-4" style="top:50px;">                  
-<img src="../images/party.jpg" width="300" height="300">
+<img src="../../public/img/pizza.jpg" width="300" height="300">
  
  
                                          
@@ -30,18 +30,67 @@ class editProduct extends view{
 
 <div class="col-md-4">
     <div class="row" style="margin-bottom:120px;">
-    <h3>Current Name</h3>
-    <p>
+<h3>Current Name:</h3>
+<h4>HCI</h4>
      </div>
      <div class="row"   style="margin-bottom:90px;">
 
      <h3>Current Description</h3>
+     <h4>Number one</h4>
      </div>
      <div class="row">
      <h3>Current Price</h3>
+     <h4>PRICELESS</h4>
      </div>
 
 </div>
+
+  <!--  <div class="container" style="margin-top:200px;">
+    <div class="row">
+ 
+
+<?php
+            //foreach($this->model->readMenuProd() as $item){
+            
+            ?>
+
+<div class="col-md-4" style="top:50px;">                  
+ <img src="<?php// echo URLROOT . $item->img; ?>" alt="">  
+<img src="../../public/img/pizza.jpg" alt="">  
+<input type="file" class="new" name="uploadfile"  placeholder="Change Photo"/>
+</div>
+<?php
+         //    }  
+             ?>
+<?php
+     //       foreach($this->model->readMenuProd() as $item){
+            
+            ?>
+<div class="col-md-4">
+    <div class="row" style="margin-bottom:120px;">
+  <h3>Current Name:</h3> 
+  <h4>HCI</h4> 
+  
+      <h4> <?php// echo $item->name?></h4> 
+     </div>
+     
+     <div class="row"   style="margin-bottom:90px;">
+     <h3>Current Description:</h3>
+     <h4>Number one.</h4>
+   <h4> <?php //echo $item->description?>Made with Love</h4> 
+     </div>
+
+     <div class="row">
+     <h3>Current Price:</h3>
+     <h4>Priceless</h4>
+    <h4> <?php// echo $item->price?>299 L.E</h4> 
+     </div>
+
+</div>
+     <?php
+        //     }  
+             ?>-->
+
 
 
 <div class="col-md-4">

@@ -12,7 +12,7 @@ class userprofile extends view{
             
             ?>
 <div>
-<button type="button" id="blue_button1">Edit </button>
+<input type="button" onclick="window.location.href='<?php echo URLROOT . 'public/pages/edituserprof'; ?>';" id="blue_button1" value="Edit"> </input>
 </div>
 
 
