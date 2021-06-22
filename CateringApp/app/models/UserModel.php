@@ -3,7 +3,7 @@ class UserModel extends model
 {
     protected $phone;
     protected $password;
-
+    protected $id;
     protected $phoneErr;
     protected $passwordErr;
 
