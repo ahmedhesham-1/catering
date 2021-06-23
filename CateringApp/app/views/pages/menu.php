@@ -31,7 +31,7 @@ class menu extends view{
             ?>
             <div class="item">
                 <div class="image-container imgHolder">
-                    <img src="<?php echo URLROOT . $item->img; ?>" alt=""> 
+                    <img src="../img/<?php echo $item->img; ?>" alt=""> 
                     
                         <span>Price: <?php echo $item->price?></span>
                         </div>
