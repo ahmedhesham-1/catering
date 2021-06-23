@@ -37,8 +37,11 @@ class menu extends view{
                         </div>
                 <h2><?php echo $item->name?></h2>
                 <p><?php echo $item->description?></p>
-               <a href="#" class="btn cart px-auto">Add to Cart</a>`
-            </div>
+                <form action="./shopingcart" method="POST">
+                <input type="hidden" name="id" value="<?= $item->ID ?>">
+                <input type="hidden" name="quantity" value="1">
+                <button type="submit" class="btn cart px-auto">Add to Cart</button>
+              </form>            </div>
 
               <?php
              }  
@@ -76,8 +79,11 @@ class menu extends view{
                         </div>
                 <h2><?php echo $item->name?></h2>
                 <p><?php echo $item->description?></p>
-               <a href="#" class="btn cart px-auto">Add to Cart</a>`
-            </div>
+                <form action="./shopingcart" method="POST">
+                <input type="hidden" name="id" value="1">
+                <input type="hidden" name="quantity" value="1">
+                <button type="submit" class="btn cart px-auto">Add to Cart</button>
+              </form>            </div>
 
               <?php
              }  
@@ -114,7 +120,11 @@ class menu extends view{
                         </div>
                 <h2><?php echo $item->name?></h2>
                 <p><?php echo $item->description?></p>
-               <a href="#" class="btn cart px-auto">Add to Cart</a>`
+                <form action="./shopingcart" method="POST">
+                <input type="hidden" name="id" value="1">
+                <input type="hidden" name="quantity" value="1">
+                <button type="submit" class="btn cart px-auto">Add to Cart</button>
+              </form>
             </div>
 
               <?php
