@@ -7,7 +7,7 @@ class userprofile extends view{
  ?>
 
 
-          <?php
+            <?php
             foreach($this->model->readProfile($_SESSION['ID']) as $item){
             
             ?>
