@@ -142,7 +142,7 @@ class shopingcart extends view{
             </li>
           </ul>
 
-          <button type="button" class="btn btn-primary btn-block waves-effect waves-light">go to checkout</button>
+          <a href="checkout.php"><button type="button" class="btn btn-primary btn-block waves-effect waves-light">go to checkout</button></a>
 
         </div>
       </div>
@@ -152,7 +152,7 @@ class shopingcart extends view{
       <div class="card mb-3">
         <div class="card-body">
 
-          <a class="dark-grey-text d-flex justify-content-between" data-toggle="collapse" href="#collapseExample1"
+          <a class="dark-grey-text d-flex justify-content-between" style="color: black" data-toggle="collapse" href="checkout.php"
             aria-expanded="false" aria-controls="collapseExample1">
             Add a discount code (optional)
             <span><i class="fas fa-chevron-down pt-1"></i></span>

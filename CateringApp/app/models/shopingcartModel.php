@@ -92,4 +92,18 @@ class shopingcartModel extends Model{
 		unset($this->productsQuantity); 
 		$this->productsQuantity=array();
 	}
+
+	public function setOrder($id){
+		$cart = $this->getCartItems();
+		if($cart){
+			foreach($cart as $item){
+				$this->dbh->query('INSERT INTO checkout_orders VALUES(\'\',:item_id,:checkout_id,:quantity)');
+				$this->dbh->bind(':item_id',$item['ID']);
+				$this->dbh->bind(':quantity',$item["quantity"]);
+				$this->dbh->bind(':checkout_id',$id);
+				$this->dbh->execute();
+			}
+			$this->emptyCart();
+		}
+	}
 }
