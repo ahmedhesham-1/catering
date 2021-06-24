@@ -6,6 +6,7 @@ class edituserprof extends view{
     require APPROOT . '/views/inc/header.php';
  ?>
 
+         
 
 <div>
 <input type="file"   id="yellow_button" name="uploadfile"  value="upload photo"/>
@@ -19,16 +20,16 @@ class edituserprof extends view{
 
 <div>
 <form>  
-    <label id="User1">User 1</label>
+    <label id="User1">New Username</label>
     <br>  
     <input id="box1" type="text" name="New Name" placeholder="New Name" ><br>  
 
-    <label id="number" >0112344234</label>
+    <label id="number" >New Phone number</label>
     <br>  
     <input id="box2" type="text" name="New Phone" placeholder="New Phone">
     <br>  
       
-    <label id= "user123" >User123</label>
+    <label id= "user123" > New Password</label>
     <br>  
     <input id="box3" type="text" name="New Password" placeholder="New Password">
     <br>  
@@ -42,6 +43,8 @@ class edituserprof extends view{
 <img src="../../public/img/party.jpg" alt="Avatar" style="width:150px">
 </span>
 
+
+ 
  <?php
   require APPROOT . '/views/inc/footer.php';
 
