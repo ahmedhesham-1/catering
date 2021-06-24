@@ -111,4 +111,24 @@ class Admin extends Controller
         $ordersView = new orders($this->getModel(), $this);
         $ordersView->output();
     }
+
+    public function contactform()
+    {
+        $contactformModel = $this->getModel();
+        if (isset($_POST['delet']))
+        {
+        
+            if ($contactformModel->deleteForm($_POST['delet']))
+            {
+                echo '<script> window.location = "contactform";
+                alert("Deleted!");
+              </script>'; 
+            }
+            header('location: ' . URLROOT . 'public/admin/contactform');
+        }
+        $viewPath = VIEWS_PATH . 'admin/contactform.php';
+        require_once $viewPath;
+        $contactformView = new contactform($this->getModel(), $this);
+        $contactformView->output();
+    }
 }

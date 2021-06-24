@@ -7,7 +7,7 @@ class Index extends view{
  ?>
 
 
-<div class="Head">
+<div class="top-banner">
         <h1>Louki's Catering</h1>
         <p>Redefining the role of the caterer.</p>
     </div>

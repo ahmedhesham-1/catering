@@ -15,6 +15,7 @@ body {
     flex: 2;
 }
 
+
 .header {
     color:white;
     height: 80px;
@@ -50,6 +51,56 @@ body {
     
 }
 
+.custom-file-input::-webkit-file-upload-button {
+    visibility: hidden;
+  }
+  .custom-file-input::before {
+    content: 'Choose Picture';
+    display: inline-block;
+    background: #474747;
+    border: 1px solid #999;
+    border-radius: 25px;
+    padding: 12px;
+    outline: none;
+    -webkit-appearance: button;
+    white-space: nowrap;
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+  }
+  .custom-file-input:hover::before {
+    border-color: black;
+  }
+  .custom-file-input:active::before {
+    background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+  }
+
+  
+  .box select {
+    background-color: #474747;
+    color: white;
+    padding: 12px;
+    border-radius: 20px;
+    width: 250px;
+    border: none;
+    font-size: 20px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+    -webkit-appearance: button;
+    appearance: button;
+    outline: none;
+  }
+  
+
+  
+  .box select option {
+    padding: 30px;
+  }
+
+::placeholder {
+    color: rgb(47, 47, 51);
+    font-size: 1.5em;
+    padding-left: 5px;
+  }
 
 a:link {
   color: white;
@@ -107,12 +158,13 @@ a.btn.alt{
     }
 
     .new{
-width: 208px;
-height: 41px;
-
-margin-top:10px;
-background: #C4C4C4;
-border-radius: 30px;
+      width: 208px;
+      height: 41px;
+      FONT-SIZE: 20px;
+      margin-top: 10px;
+      background: #474747;
+      border-radius: 30px;
+      color: white;
     }
     .right-form{
     
@@ -170,15 +222,15 @@ border-radius: 30px;
      }
 
      .cart {
-        background-color: #fff;
-        color: black;
-        margin-top: 10px;
-        font-size: 12px;
-        font-weight: 900;
-        width: 40%;
-        height: 39px;
-        padding-top: 9px;
-        box-shadow: 0px 5px 10px #212121
+      background-color: #333;
+      color: white;
+      margin-top: 10px;
+      font-size: 12px;
+      font-weight: 900;
+      width: 40%;
+      height: 39px;
+      padding-top: 9px;
+      box-shadow: 0px 0.2px 5px #212121;
     }
     .imgHolder {
         position: relative;
@@ -191,7 +243,7 @@ border-radius: 30px;
         width: 112px;
 height: 33px;
 
-background: #FFFFFF;
+background: #d1d1d1;
 border-radius: 40px;
 
 display: flex;

@@ -10,7 +10,7 @@ class services extends view{
 
 
 
-<div class="Head">
+<div class="top-banner">
         <h1>Our Services</h1>
         <p>We Spread Love.</p>
     </div>

@@ -17,8 +17,21 @@ class addProduct extends view{
 </head>
     <div class="container" style="margin-top:200px;">
     <div class="row">
- <div class="col-md-6" style="top:30px;">                  
-<img src="../../public/img/pizza.jpg" width="300" height="300">
+ <div class="col-md-6" style="top:30px;">         
+ 
+ <style>
+body {
+  background-image: url(../../public/img/backAdd.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  
+}
+.h3, h3 {
+    font-size: 34px;
+    color:white;
+}
+</style>
  
 
 </div>
@@ -29,33 +42,35 @@ class addProduct extends view{
 <div class="col-md-6">
 
 <form action="" method="post">
-<h3>New Name</h3>
+<h3 >New Name:</h3>
 
- <input type="text" class="inputFields" name="name" placeholder="Name"  pattern="[A-Za-z\s+]{2,10}" title="Please enter a valid product name."/>
-
-
-
-<h3>New Description</h3>
-
-  <input type="text" class="inputFields" name="description" placeholder="Description" pattern="[A-Za-z\s+]{2,1000}" title="Please enter a valid description text." />
+ <input type="text" class="inputFields" name="name" placeholder="Name" required pattern="[A-Za-z\s+]{2,10}" title="Please enter a valid product name.(Only Text)"/>
 
 
 
-<h3>New Price</h3>
+<h3>New Description:</h3>
 
-  <input type="number" class="inputFields" name="price" placeholder="Price" pattern="[0-9]{1,10000}" title="Please enter valid price" />
+  <input type="text" class="inputFields" name="description" placeholder="Description" required pattern="[A-Za-z\s+]{2,1000}" title="Please enter a valid description text. (Only Text)" />
 
-<h3>Category</h3>
 
+
+<h3>New Price:</h3>
+
+  <input type="text" class="inputFields" name="price" placeholder="Price" required pattern="[0-9]{1,10000}" title="Please enter valid price (Only Numbers)" />
+
+<h3>Category:</h3>
+
+<div class="box">
     <select name="category">
     <option value="appetizers">Apptizers</option>
     <option value="salads">Salads</option>
-    <option value="maindish">MainDish</option>
+    <option value="maindish">Main Dish</option>
   </select>
-  
-<h3>Chose Product Pic</h3>
 
-<input type="file" class="inputFields" name="img" placeholder="Add Pic"/>
+
+<h3>New Product Pic:</h3>
+<input type="file" class="custom-file-input" name="img" placeholder="Add Pic" required/>
+</div>
 
 
 <input type="submit" class="new" name="prbt" value="Save" />

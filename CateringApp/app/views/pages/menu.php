@@ -33,7 +33,7 @@ class menu extends view{
                 <div class="image-container imgHolder">
                     <img src="<?php echo URLROOT . $item->img; ?>" alt=""> 
                     
-                        <span>Price: <?php echo $item->price?></span>
+                        <span>Price: <?php echo $item->price?>LE</span>
                         </div>
                 <h2><?php echo $item->name?></h2>
                 <p><?php echo $item->description?></p>
@@ -75,7 +75,7 @@ class menu extends view{
                 <div class="image-container imgHolder">
                     <img src="<?php echo URLROOT . $item->img; ?>" alt=""> 
                     
-                        <span>Price: <?php echo $item->price?></span>
+                        <span>Price: <?php echo $item->price?>LE</span>
                         </div>
                 <h2><?php echo $item->name?></h2>
                 <p><?php echo $item->description?></p>
@@ -116,7 +116,7 @@ class menu extends view{
                 <div class="image-container imgHolder">
                     <img src="<?php echo URLROOT . $item->img; ?>" alt=""> 
                     
-                        <span>Price: <?php echo $item->price?></span>
+                        <span>Price: <?php echo $item->price?>LE</span>
                         </div>
                 <h2><?php echo $item->name?></h2>
                 <p><?php echo $item->description?></p>
