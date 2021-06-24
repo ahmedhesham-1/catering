@@ -58,7 +58,7 @@ class Users extends Controller
         }
         // Load form
         //echo 'Load form, Request method: ' . $_SERVER['REQUEST_METHOD'];
-        $viewPath = VIEWS_PATH . 'users/register.php';
+        $viewPath = VIEWS_PATH . 'users/Register.php';
         require_once $viewPath;
         $view = new Register($this->getModel(), $this);
         $view->output();
@@ -88,9 +88,15 @@ class Users extends Controller
          
 
             if($x=$userModel->findUserByPhone($_POST['phone'])){
-                $_SESSION['ID']=$x->id;
+                $ty=$x->type;
+                $_SESSION['ID']=$x->ID;
+                if($ty== 'user'){
+                    
                 header('location: ' . URLROOT . 'public/pages/index');
-
+                }else if($ty== 'admin'){
+                    
+                header('location: ' . URLROOT . 'public/admin/adminmenu');
+                }
             }
 
 

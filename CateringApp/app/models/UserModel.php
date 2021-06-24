@@ -4,6 +4,7 @@ class UserModel extends model
     protected $phone;
     protected $password;
     protected $id;
+    protected $type;
     protected $phoneErr;
     protected $passwordErr;
 
@@ -59,7 +60,7 @@ class UserModel extends model
         $this->dbh->bind(':phone', $phone);
 
         $userRecord = $this->dbh->single();
-        return $this->dbh->rowCount();
+        return $this->dbh->single();
     }
 
     public function phoneExist($phone)

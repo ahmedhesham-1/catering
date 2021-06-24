@@ -1,4 +1,7 @@
 
+<?php
+session_start();
+?>
 <div class="header flex">
     <div class="header-logo fl-1">
         <img src="<?php echo URLROOT . 'public/img/logoBack.jpg'; ?>"  onclick="window.location.href='<?php echo URLROOT . 'public/pages/index'; ?>';"alt="">
@@ -33,10 +36,26 @@
             <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
         </svg>
         </div>
-      
+   
     </div>
+
+    <?php
+        if(isset($_SESSION['ID'])){
+            ?>
     <div class="header-buttons fl-1">
-        <input type="button" onclick="window.location.href='<?php echo URLROOT . 'public/users/Login'; ?>';" class="btn alt" value="Signin">
+        <input type="button" onclick="window.location.href='<?php echo URLROOT . 'public/users/login'; ?>';" class="btn alt" value="Profile">
+    </div>
+            <?php
+
+        }else{
+        ?>
+<div class="header-buttons fl-1">
+        <input type="button" onclick="window.location.href='<?php echo URLROOT . 'public/users/login'; ?>';" class="btn alt" value="Signin">
         <input type="button" onclick="window.location.href='<?php echo URLROOT . 'public/users/Register'; ?>';" class="btn alt" value="Signup">
     </div>
+    <?php
+
+    }
+    ?>
+
 </div>

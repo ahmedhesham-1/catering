@@ -60,7 +60,6 @@ class shopingcart extends view{
                   <div>
                     <div class="def-number-input number-input safari_only mb-0 w-100">
                       
-                      <input class="quantity" min="0" name="quantity" value="<?= $item['quantity'] ?>" type="number">
                       <form action="" method="POST">
                         <button class="btn btn-primary" type="submit" name="quantity" value="1">
                         <i class="fas fa-plus"></i>
@@ -103,9 +102,7 @@ class shopingcart extends view{
       <!-- Card -->
      <!-- <div class="card mb-3">
         <div class="card-body">
-
           <h5 class="mb-4">Expected shipping delivery</h5>
-
           <p class="mb-0"> Thu., 12.03. - Mon., 16.03.</p>
         </div>
       </div>
@@ -128,10 +125,8 @@ class shopingcart extends view{
           <ul class="list-group list-group-flush">
             <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 mb-3">
               <div>
-                <strong>The total amount of</strong>
-                <strong>
-                  <p class="mb-0">(including VAT)</p>
-                </strong>
+                <strong>The total amount: </strong>
+                
               </div>
               <?php
               $total = 0;
