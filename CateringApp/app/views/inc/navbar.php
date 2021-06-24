@@ -1,5 +1,6 @@
 
 <?php
+error_reporting(0);
 session_start();
 ?>
 <div class="header flex">
@@ -43,8 +44,16 @@ session_start();
         if(isset($_SESSION['ID'])){
             ?>
     <div class="header-buttons fl-1">
-        <input type="button" onclick="window.location.href='<?php echo URLROOT . 'public/users/login'; ?>';" class="btn alt" value="Profile">
+        <input type="button" onclick="window.location.href='<?php echo URLROOT . 'public/pages/userprofile'; ?>';" class="btn alt" value="Profile">
     </div>
+
+            
+    <!-- <div class="header-buttons fl-1" style="margin-left:50px;">
+         
+          <a href="   echo URLROOT;     /controller/users/logout">logout</a>
+    </div> -->
+
+
             <?php
 
         }else{
