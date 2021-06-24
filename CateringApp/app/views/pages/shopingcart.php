@@ -48,7 +48,7 @@ class shopingcart extends view{
             <div class="col-md-5 col-lg-3 col-xl-3">
               <div class="view zoom overlay z-depth-1 rounded mb-3 mb-md-0">
                 <img class="img-fluid w-100"
-                  src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/12a.jpg" alt="Sample">
+                  src="../img/<?= $item['image'] ?>" alt="Sample">
               </div>
             </div>
             <div class="col-md-7 col-lg-9 col-xl-9">
@@ -137,14 +137,32 @@ class shopingcart extends view{
             </li>
           </ul>
 
-          <button type="button" onclick="window.location.href='<?php echo URLROOT . 'public/pages/menu'; ?>';" class="btn btn-primary btn-block waves-effect waves-light">Continue Shopping</button>
-          <button type="button" onclick="window.location.href='<?php echo URLROOT . 'public/pages/checkout'; ?>';"class="btn btn-primary btn-block waves-effect waves-light">Go to checkout</button>
+          <a href="checkout.php"><button type="button" class="btn btn-primary btn-block waves-effect waves-light">go to checkout</button></a>
+
         </div>
       </div>
       <!-- Card -->
 
       <!-- Card -->
-      
+      <div class="card mb-3">
+        <div class="card-body">
+
+          <a class="dark-grey-text d-flex justify-content-between" style="color: black" data-toggle="collapse" href="checkout.php"
+            aria-expanded="false" aria-controls="collapseExample1">
+            Add a discount code (optional)
+            <span><i class="fas fa-chevron-down pt-1"></i></span>
+          </a>
+
+          <div class="collapse" id="collapseExample1">
+            <div class="mt-3">
+              <div class="md-form md-outline mb-0">
+                <input type="text" id="discount-code1" class="form-control font-weight-light"
+                  placeholder="Enter discount code">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <!-- Card -->
 
     </div>
