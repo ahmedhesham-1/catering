@@ -3,6 +3,7 @@ class adminmenu extends view{
   public function output(){
     $title = $this->model->title;
    
+    
     require APPROOT . '/views/inc/adminheader.php';
  ?>
 
@@ -20,13 +21,14 @@ class adminmenu extends view{
       <a style="margin-left:650px;" href="<?php echo URLROOT . 'public/admin/addProduct'; ?>" class="btn cart px-auto heading ">ADD PRODUCT</a>
         <h1 class="heading">Apptiezers </h1>
         
-     
+       
       
       <div class="row">
 
         <div class="menu-items flex wrap">
 
             <?php
+            
             foreach($this->model->readMenuApp() as $item){
             
             ?>
@@ -38,15 +40,19 @@ class adminmenu extends view{
                         </div>
                 <h2><?php echo $item->name?></h2>
                 <p><?php echo $item->description?></p>
-                <form method="post">
-               <a href="<?php echo URLROOT . 'public/admin/editProduct'; ?>"name="edit" value="<?php $item->ID;?>" class="btn cart px-auto">Edit</a> or <a href="#"name="delete" value="delete" class="btn cart px-auto">Delete</a>
-            </form>
+                <form method="post" action="editProduct">
+                  
+               <button name="edit" value="<?php echo $item->ID;?>" onclick="window.location.href='<?php echo URLROOT . 'public/admin/editProduct'; ?>';"class="btn cart px-auto">Edit</button>
+                </form>
+                <form method="post" action="" name="delete">
+                <button name="delete" value="<?php echo $item->ID;?>" class="btn cart px-auto">Delete</button>
+               </form>
             </div>
 
               <?php
              }  
              ?>
-            
+
             </div>
             </div>
     </div>

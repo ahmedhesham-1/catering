@@ -15,6 +15,6 @@
       
     </div>
     <div class="header-buttons fl-1">
-        <input type="button" onclick="window.location.href='<?php echo URLROOT . 'public/admin/adminprofile'; ?>';" class="btn alt" value="profile">
+        <input type="button" onclick="window.location.href='<?php echo URLROOT . 'public/admin/Adminprofile'; ?>';" class="btn alt" value="profile">
     </div>
 </div>

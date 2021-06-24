@@ -51,7 +51,7 @@ max-width: 400px;
 
 .menu-items .item{
     flex-grow:1;    
-    padding: 20px;
+    
     width: min(100%, 300px);
     min-height: 300px;
 }

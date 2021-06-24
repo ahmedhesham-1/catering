@@ -32,27 +32,37 @@ class orders extends view{
   <th scope="col">Addres</th>
   <th scope="col">Date</th>
   <th scope="col">Order Details</th>
+  <th scope="col">user ID</th>
   </tr>
    </thead>
+   <?php
+            
+            foreach($this->model->showOrders() as $item){
+            
+            ?>
   <tr>
   <tbody>
-    <td>34</td>
-    <td>Smith</td>
-    <td>0115434788</td>
-    <td>egypt</td>
-    <td>03/4/2020</td>
-    <td>greek salad</td>
-   
-     <td><button type="button" class="btn btn-secondary">
+    <td><?php echo $item->orderID?></td>
+    <td><?php echo $item->username?></td>
+    <td><?php echo $item->phonenumber?></td>
+    <td><?php echo $item->address?></td>
+    <td><?php echo $item->date?></td>
+    <td><?php echo $item->orderDetails?></td>
+    <td><?php echo $item->userID?></td>
+
+     <form method="post" action="" name="delete">
+     <td><button  name="delete" value="<?php echo $item->orderID;?>" class="btn btn-secondary">
+     </form>
                 <svg style="color:black;"xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
   <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"></path>
   <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"></path>
 </svg>
     </button></td></tr>
-
   </tr>
   </tbody>
-  
+  <?php
+             }  
+             ?>
 </table>
 
 </div>

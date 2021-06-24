@@ -4,6 +4,21 @@ class Admin extends Controller
 
     public function adminmenu()
     {
+
+        $adminmenuModel = $this->getModel();
+        if (isset($_POST['delete']))
+        {
+        
+            if ($adminmenuModel->deleteProd($_POST['delete']))
+            {
+                echo '<script> window.location = "adminmenu";
+                alert("Deleted!");
+              </script>'; 
+            }
+            header('location: ' . URLROOT . 'public/admin/adminmenu');
+        }
+       
+        
         $viewPath = VIEWS_PATH . 'admin/adminmenu.php';
         require_once $viewPath;
         $adminmenuView = new adminmenu($this->getModel(), $this);
@@ -25,7 +40,7 @@ class Admin extends Controller
                 if ($addProductModel->addProd()) {
                     header('location: ' . URLROOT . 'public/admin/addProduct');
                 } else {
-                    die('Error in sign up');
+                    die('Error adding prod');
                 }
             
         }
@@ -38,6 +53,24 @@ class Admin extends Controller
 
      public function editProduct()
     {
+        $editProductModel = $this->getModel();
+        
+        if (isset($_POST['update']))
+        {
+                    $editProductModel->setName($_POST['name']);
+                    $editProductModel->setDescription($_POST['description']);
+                    $editProductModel->setPrice($_POST['price']);
+                    //$editProductModel->setImg($_POST['img']);
+                    $editProductModel->setProduct($_POST['update']);
+                   if($editProductModel->updateProduct()){
+                     echo '<script> window.location = "editProduct";
+                alert("Edited!");
+              </script>'; 
+                   }
+                    header('location: ' . URLROOT . 'public/admin/adminmenu');
+        }
+
+
         $viewPath = VIEWS_PATH . 'admin/editProduct.php';
         require_once $viewPath;
         $editProductView = new editProduct($this->getModel(), $this);
@@ -61,6 +94,18 @@ class Admin extends Controller
 
     public function orders()
     {
+        $ordersModel = $this->getModel();
+        if (isset($_POST['delete']))
+        {
+        
+            if ($ordersModel->deleteOrder($_POST['delete']))
+            {
+                echo '<script> window.location = "orders";
+                alert("Deleted!");
+              </script>'; 
+            }
+            header('location: ' . URLROOT . 'public/admin/orders');
+        }
         $viewPath = VIEWS_PATH . 'admin/orders.php';
         require_once $viewPath;
         $ordersView = new orders($this->getModel(), $this);
